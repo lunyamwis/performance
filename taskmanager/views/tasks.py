@@ -126,7 +126,7 @@ class TaskCreate(CreateView):
                 target_users = []
                 for data in all_subtasks:
                     target_emails.append(data.member_assigned.email)
-                
+                # import pdb;pdb.set_trace()
                 target_users.append(data.member_assigned)
                 send_mail(subject, message, settings.FROM_EMAIL,
                           target_emails, html_message=html_content)
